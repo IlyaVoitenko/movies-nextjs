@@ -20,6 +20,24 @@ export const getListMovies = async () => {
     const { data } = await axios.request(options);
     return data;
   } catch (error) {
-    console.error(error);
+    throw Error(error);
+  }
+};
+export const getDetailMovie = async (id) => {
+  const options = {
+    method: "GET",
+    url: `https://api.themoviedb.org/3/movie/${id}`,
+    params: { language: "en-US" },
+    headers: {
+      accept: "application/json",
+      Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
+    },
+  };
+
+  try {
+    const { data } = await axios.request(options);
+    return data;
+  } catch (error) {
+    throw Error(error);
   }
 };

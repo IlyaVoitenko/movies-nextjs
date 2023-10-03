@@ -1,7 +1,7 @@
-import { Inter } from "next/font/google";
+import { Rajdhani } from "next/font/google";
 import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Rajdhani({ subsets: ["latin"], weight: "300" });
 
 export default function Home() {
   return (

@@ -1,10 +1,9 @@
 import Head from "next/head";
 import { getListMovies } from "../api/movies";
-import ListMovie from "@/src/app/components/ListMovie";
+import ListMovies from "@/src/app/components/ListMovies";
 
 export const getStaticProps = async () => {
   const { results } = await getListMovies();
-  if (!results) throw Error("Films not found ");
   return {
     props: {
       movies: results,
@@ -18,7 +17,7 @@ const Movies = ({ movies }) => {
       <Head>
         <title>Movies</title>
       </Head>
-      <ListMovie movies={movies} />
+      <ListMovies movies={movies} />
     </>
   );
 };

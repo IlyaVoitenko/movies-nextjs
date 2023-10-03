@@ -1,6 +1,6 @@
-import ItemMovie from "./ItemMovie";
+import ItemMovie from "./ItemMovies";
 
-const ListMovie = ({ movies }) => {
+const ListMovies = ({ movies }) => {
   return (
     <div className="flex justify-center  flex-row  flex-wrap ">
       {movies && movies.map((item) => <ItemMovie key={item.id} item={item} />)}
@@ -8,4 +8,4 @@ const ListMovie = ({ movies }) => {
   );
 };
 
-export default ListMovie;
+export default ListMovies;

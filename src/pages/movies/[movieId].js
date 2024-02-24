@@ -1,6 +1,7 @@
 import React from "react";
 import { getDetailMovie } from "../api/movies";
 import Movie from "@/src/app/components/Movie";
+
 export const getServerSideProps = async (context) => {
   try {
     const { movieId } = context.params;

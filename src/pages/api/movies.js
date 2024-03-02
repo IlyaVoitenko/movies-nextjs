@@ -13,7 +13,7 @@ export const getListMovies = async () => {
     },
     headers: {
       accept: "application/json",
-      Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
+      Authorization: `Bearer ${process.env.NEXT_ACCESS_TOKEN}`,
     },
   };
   try {
@@ -30,7 +30,7 @@ export const getDetailMovie = async (id) => {
     params: { language: "en-US" },
     headers: {
       accept: "application/json",
-      Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
+      Authorization: `Bearer ${process.env.NEXT_ACCESS_TOKEN}`,
     },
   };
 

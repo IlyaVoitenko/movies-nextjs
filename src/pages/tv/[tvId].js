@@ -1,11 +1,11 @@
 import React from "react";
-import { getDetailMovie } from "../api/movies";
+import { getDetailTv } from "../api/tv";
 import Product from "@/src/app/components/Product";
 
 export const getServerSideProps = async (context) => {
   try {
-    const { movieId } = context.params;
-    const response = await getDetailMovie(movieId);
+    const { tvId } = context.params;
+    const response = await getDetailTv(tvId);
 
     return {
       props: {
@@ -16,8 +16,8 @@ export const getServerSideProps = async (context) => {
     throw Error("Error : ", error);
   }
 };
-const MoviePage = ({ movie }) => {
+const TvPage = ({ movie }) => {
   return <Product product={movie} />;
 };
 
-export default MoviePage;
+export default TvPage;

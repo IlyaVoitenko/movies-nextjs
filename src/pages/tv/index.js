@@ -6,7 +6,7 @@ import ListTV from "../../app/components/ListTV";
 
 export const getStaticProps = async () => {
   try {
-    const results = (await getTvList()) || null;
+    const results = await getTvList();
     return {
       props: {
         tvList: results,

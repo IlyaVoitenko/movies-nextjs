@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className={styles.container}>
       <Link href={"/tv"}>TV</Link>
-      <Link href={"/movies"}>movies</Link>
+      <Link href={"/movies"}>Movies</Link>
     </div>
   );
 };

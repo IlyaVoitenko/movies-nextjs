@@ -1,20 +1,24 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const ItemTV = ({ tvShow }) => {
+  const { id, name, poster_path, vote_average } = tvShow;
   return (
-    <section className="w-1/4 mt-4 mb-4">
-      <article>
-        <h3>{tvShow.name}</h3>
-        <Image
-          src={`https://image.tmdb.org/t/p/w500/${tvShow.poster_path}`}
-          alt={`Post of ${tvShow.name}`}
-          width={200}
-          height={200}
-        />
-        <p>Vote average : {tvShow.vote_average}</p>
-      </article>
-    </section>
+    <Link href={`/tv/${id}`}>
+      <div className="w-full  m-3">
+        <article className="flex flex-col items-center ">
+          <h3 className="hyphens-auto">{name}</h3>
+          <Image
+            src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+            alt={`Post of ${name}`}
+            width={200}
+            height={200}
+          />
+          <p>Vote average : {vote_average}</p>
+        </article>
+      </div>
+    </Link>
   );
 };
 

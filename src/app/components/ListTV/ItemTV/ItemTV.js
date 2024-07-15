@@ -8,7 +8,7 @@ const ItemTV = ({ tvShow }) => {
     <Link href={`/tv/${id}`}>
       <div className="w-full  m-3">
         <article className="flex flex-col items-center ">
-          <h3 className="hyphens-auto">{name}</h3>
+          <h3 className="hyphens-auto w-[300px] text-center">{name}</h3>
           <Image
             src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
             alt={`Post of ${name}`}

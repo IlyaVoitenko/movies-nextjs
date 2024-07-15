@@ -5,7 +5,7 @@ const ListTV = ({ tvList }) => {
   const { results } = tvList || null;
 
   return (
-    <section className="flex container flex-wrap ">
+    <section className="flex items-center justify-center  container flex-wrap ">
       {results &&
         results.map((tvShow) => <ItemTV key={tvShow.id} tvShow={tvShow} />)}
     </section>

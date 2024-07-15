@@ -3,7 +3,11 @@ import React from "react";
 const ReleaseStatus = ({ status, release_date }) => {
   return (
     <p className="ml-2">
-      {status === "Released" ? `Released : ${release_date}` : "not released"}
+      {status === "Released" ? (
+        <span className="font-bold text-lg">Released : {release_date}</span>
+      ) : (
+        "not released"
+      )}
     </p>
   );
 };

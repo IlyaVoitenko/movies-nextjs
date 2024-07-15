@@ -13,7 +13,7 @@ export const getListMovies = async () => {
     },
     headers: {
       accept: "application/json",
-      Authorization: `Bearer ${process.env.NEXT_ACCESS_TOKEN}`,
+      Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MDcyNzk0ZWYyY2YyMmFmNDYzZGNiZDVjMjZkZGU0MCIsIm5iZiI6MTcyMTA2MjIwMi42MTYyNTksInN1YiI6IjY2OTU1MmUyNjFkMzBjMzIzNjVhNGM0OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.AHTSyMNOyPPVACFrRkNFrk7FypYFAJtqfWPMl0R33BM`,
     },
   };
   try {
@@ -30,7 +30,7 @@ export const getDetailMovie = async (id) => {
     params: { language: "en-US" },
     headers: {
       accept: "application/json",
-      Authorization: `Bearer ${process.env.NEXT_ACCESS_TOKEN}`,
+      Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MDcyNzk0ZWYyY2YyMmFmNDYzZGNiZDVjMjZkZGU0MCIsIm5iZiI6MTcyMTA2MjIwMi42MTYyNTksInN1YiI6IjY2OTU1MmUyNjFkMzBjMzIzNjVhNGM0OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.AHTSyMNOyPPVACFrRkNFrk7FypYFAJtqfWPMl0R33BM`,
     },
   };
 

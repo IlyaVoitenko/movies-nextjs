@@ -39,14 +39,21 @@ const Product = ({ product }) => {
             width={250}
             height={400}
           />
-          <article className="flex flex-col">
-            <strong className="ml-2">name : {original_title}</strong>
+          <article className="flex justify-between flex-col">
+            <strong className="ml-2">
+              {" "}
+              <span className="font-bold text-lg">Name :</span> {original_title}
+            </strong>
             <ListGenres genres={genres} />
-            <p className="ml-2">description : {overview}</p>
             <LanguagesSupport languages={spoken_languages} />
             <ReleaseStatus status={status} release_date={release_date} />
             <Countries countries={production_countries} />
             <Companies companies={production_companies} />
+            <p className="ml-2">
+              {" "}
+              <span className="font-bold text-lg"> Description : </span>
+              {overview}
+            </p>
           </article>
         </div>
       </section>

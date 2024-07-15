@@ -12,8 +12,7 @@ const ItemMovie = ({ item }) => {
           width={250}
           height={400}
         />
-        <p>{original_title}</p>
-        <span>{overview}</span>
+        <p className="font-bold mt-1">{original_title}</p>
       </div>
     </Link>
   );
